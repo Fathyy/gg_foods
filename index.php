@@ -24,6 +24,9 @@ include 'db_connect.php';
                 <th>PHONE NUMBER</th>
                 <th>DOB</th>
                 <th>ADDRESS</th>
+                <th>EDIT</th>
+                <th>DELETE </th>
+                
 
             </tr>
         </thead>
@@ -36,6 +39,8 @@ include 'db_connect.php';
                 <th>PHONE NUMBER</th>
                 <th>DOB</th>
                 <th>ADDRESS</th>
+                <th>EDIT</th>
+                <th>DELETE </th>
 
             </tr>
 
@@ -57,10 +62,32 @@ include 'db_connect.php';
                 echo "<td>". $employee['email'] ."</td>";
                 echo "<td>". $employee['phone'] ."</td>";
                 echo "<td>". $employee['dob'] ."</td>";
-                echo "<td>". $employee['address.'] ."</td>";
+                echo "<td>". $employee['address'] ."</td>";
+
+
+                ?>
+
+
+                <td>
+                  <form action="edit.php" method="post">
+                    <input type="hidden" 
+                    value ="<?php echo $employee['id'];?>" 
+                    name ="biko">
+
+                    <button type="submit" name ="ali" class = "btn btn-sm btn-info px-5">Edit</button>
+                  </form>
+                </td>
+
+                <td>
+                  DELETE
+                </td>
+
+                <?php
+
                 echo "</tr>";
             }
             ?>
+
         </tbody>
 
     </table>
