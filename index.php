@@ -79,7 +79,10 @@ include 'db_connect.php';
                 </td>
 
                 <td>
-                  DELETE
+                  <form action="code.php" method="post">
+                    <input type="hidden"name="users_id" value="<?php echo $employee['id'];?>">
+                    <button type="submit" class="btn btn-danger btn-sm" name="nasra">Delete</button>
+                  </form>
                 </td>
 
                 <?php

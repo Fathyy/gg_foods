@@ -29,7 +29,8 @@ if (isset($_POST['ali']))
             <div class="col-sm-12 col-md-8 mx-auto" >
             <form action="code.php" method="post">
 
-            <input type="hidden" name="users_id" value="<?php echo $users_id;?>">
+            <input type="hidden" name="users_id" value="<?php echo $row['id'];?>">  
+
         <!-- Name input start -->
         <div class="form-group">
             <label class = "form-control" for ="name" class = "form-label">
